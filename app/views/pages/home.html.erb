@@ -1,7 +1,10 @@
+<%# This should be the instance coming in. Just defining a list here for demo purposes. %>
+<% titles = ["The first title", "This should come 2nd!!!", "Then this guy!!! Third!!", "ONE MORE!! (see how it works?)"] %>
 <div data-controller="title" class="container">
+  <%# Set the id equal to the NEXT item's array index to default %>
   <h1 id="0" data-title-target="songName">Pages#home</h1>
-  <% titles = ["The first title", "This should come 2nd!!!", "Then this guy!!! Third!!", "ONE MORE!!"] %>
   <% titles.each_with_index do |title, index| %>
-    <div data-title-target="song" data-time=10 id=<%= index %> style="display:none">DEFAULT TITLE <%= index %></div>
+    <%# For data-time, set it equal to the song's duration. (song.length?) It is hard coded as 10 here. %>
+    <div data-title-target="song" data-time=10 id=<%= index %> style="display:none"> <%= title %></div>
   <% end %>
 </div>
