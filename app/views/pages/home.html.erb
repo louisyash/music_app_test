@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div data-controller="title" class="container">
+  <h1 id="0" data-title-target="songName">Pages#home</h1>
+  <% titles = ["The first title", "This should come 2nd!!!", "Then this guy!!! Third!!", "ONE MORE!!"] %>
+  <% titles.each_with_index do |title, index| %>
+    <div data-title-target="song" data-time=10 id=<%= index %> style="display:none">DEFAULT TITLE <%= index %></div>
+  <% end %>
+</div>
